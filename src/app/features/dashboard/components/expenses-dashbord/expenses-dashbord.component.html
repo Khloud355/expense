@@ -1,0 +1,147 @@
+<div class="bg-blue-600 h-[20rem] text-white p-5">
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img
+          src="../../../../../assets/images/user.svg"
+          alt="user"
+          class="w-10 h-10 rounded-full border border-gray-500"
+        />
+        <div>
+          <p class="text-sm text-blue-200">Good Morning</p>
+          <p class="font-semibold text-lg">{{ userName }}</p>
+        </div>
+      </div>
+      <div>
+        <p-dropdown
+          [options]="options"
+          optionLabel="name"
+          placeholder="This Month"
+          (onChange)="onFilterChange($event)"
+        ></p-dropdown>
+      </div>
+    </div>
+
+    <div class="balance-detail bg-blue-500 rounded-2xl p-4 mt-20 w-full">
+      <!-- total balance -->
+      <div>
+        <div class="flex items-center gap-1">
+          <p class="text-white text-lg font-bold">Total Balance</p>
+          <img
+            src="../../../../../assets/images/chevron-up.svg"
+            class="w-4"
+            alt="chevron-up"
+          />
+        </div>
+        <p class="text-3xl font-bold mt-1">
+          {{ this.income?.salary - this.totalExpenses | currency }}
+        </p>
+      </div>
+
+      <!-- income and outcome -->
+      <div class="flex items-center justify-between mt-4">
+        <!-- income -->
+        <div class="flex flex-col items-center">
+          <div class="flex gap-2 items-center">
+            <span
+              class="bg-gray-100 bg-opacity-25 rounded-full text-white w-5 h-5 flex items-center justify-center"
+            >
+              <img
+                class="w-5 h-3"
+                src="../../../../../assets/images/move-down.svg"
+                alt="move-down-income"
+              />
+            </span>
+            <p class="text-blue-200 text-lg font-semibold">Income</p>
+          </div>
+          <p class="font-bold text-white">
+            {{ income?.salary | currency }}
+          </p>
+        </div>
+
+        <!-- expenses -->
+        <div class="flex flex-col items-center">
+          <div class="flex gap-2 items-center">
+            <span
+              class="bg-gray-100 bg-opacity-25 rounded-full text-white w-5 h-5 flex items-center justify-center"
+            >
+              <img
+                class="w-5 h-3"
+                src="../../../../../assets/images/move-up.svg"
+                alt="move-up-expenses"
+              />
+            </span>
+            <p class="text-blue-200 text-lg font-semibold">Expenses</p>
+          </div>
+          <p class="font-bold text-white">{{ totalExpenses | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- recent Expenses -->
+<div class="mt-16 container">
+  <!-- expenses title -->
+
+  <div class="flex justify-between items-center mb-4">
+    <h3 class="font-semibold text-lg">Recent Expenses</h3>
+    <a
+      routerLink="/dashboard/show-all"
+      class="text-sm font-semibold text-black-500"
+      >See all</a
+    >
+  </div>
+  <!-- expense items -->
+
+  <div class="space-y-3 p-2 text-center rounded-xl bg-gray-100">
+    <ng-container *ngIf="isLoading; else afterLoading">
+      <p-skeleton
+        *ngFor="let i of [0, 1, 2, 3, 4]"
+        width="100%"
+        height="5rem"
+        class="mb-4"
+      />
+    </ng-container>
+
+    <ng-template #afterLoading>
+      <ng-container *ngIf="paginatedExpenses.length > 0; else showNoData">
+        <div *ngFor="let item of paginatedExpenses">
+          <app-expense-item [expenseCardData]="item"></app-expense-item>
+        </div>
+      </ng-container>
+    </ng-template>
+
+    <ng-template #showNoData>
+      <span class="font-bold text-gray-500 flex align-items justify-center"
+        ><span>No Expenses Found</span></span
+      >
+    </ng-template>
+    <div class="text-center mt-4 flex justify-center gap-2">
+      <button
+        class="bg-green-300 text-white-800 px-4 py-2 rounded"
+        (click)="backToPreviousPage()"
+        *ngIf="currentPage > 1"
+      >
+        Previous Page
+      </button>
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded"
+        (click)="loadMoreItems()"
+        *ngIf="hasMoreItems()"
+      >
+        LoadMore
+      </button>
+    </div>
+  </div>
+</div>
+<div class="flex items-center justify-center m-4 mb-4 sm-hidden">
+  <button
+    class="px-4 py-2 rounded-md bg-blue-500 text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed font-semibold shadow-sm transition-colors duration-300"
+    (click)="addExpense()"
+    [disabled]="this.income?.salary - this.totalExpenses <= 0"
+  >
+    Add New Expense
+  </button>
+</div>
+
+<app-mobile-footer></app-mobile-footer>

@@ -1,0 +1,46 @@
+<div
+  *ngIf="expenseCardData()"
+  class="bg-white rounded-xl shadow-md px-4 py-2 flex items-center justify-between w-full"
+>
+  <div class="flex items-center gap-4">
+    <div
+      [style.background]="expenseCardData()?.categoryIconBgColor"
+      class="w-12 h-12 rounded-full flex items-center justify-center"
+    >
+      <i
+        [ngClass]="expenseCardData()?.categoryIcon"
+        [style.color]="expenseCardData()?.categoryIconColor"
+      ></i>
+    </div>
+
+    <div class="flex flex-col items-baseline">
+      <p class="font-semibold text-gray-800">
+        {{ expenseCardData()?.categoryName }}
+      </p>
+      <p class="text-sm text-gray-500">Manually</p>
+    </div>
+  </div>
+
+  <div class="text-right">
+    <!-- converted amount -->
+    <p class="font-semibold text-gray-800">
+      -
+      {{ expenseCardData()?.amount | currency }}
+      <!-- orignal amount -->
+      <!-- <span
+        >{{ expenseCardData()?.amount }} {{ expenseCardData()?.currency }}</span
+      > -->
+    </p>
+
+    <p class="text-sm text-gray-500">
+      <span>
+        {{
+          isToday(expenseCardData()?.date)
+            ? "Today"
+            : (expenseCardData()?.date | date : "")
+        }}
+      </span>
+      {{ expenseCardData()?.date | date : "shortTime" }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,224 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Groceries",
+      "icon": "fas fa-shopping-cart",
+      "bg_color": "#E0E7FF",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "name": "Entertainment",
+      "icon": "fa-solid fa-gamepad",
+      "bg_color": "#6366F1",
+      "color": "#ffffff"
+    },
+    {
+      "id": 3,
+      "name": "Gas",
+      "icon": "fa-solid fa-gas-pump",
+      "bg_color": "#FEE2E2",
+      "color": "red"
+    },
+    {
+      "id": 4,
+      "name": "Shopping",
+      "icon": "fa-solid fa-bag-shopping",
+      "bg_color": "#FEF9C3",
+      "color": "orange"
+    },
+    {
+      "id": 5,
+      "name": "News Paper",
+      "icon": "fa-regular fa-newspaper",
+      "bg_color": "#EAB308",
+      "color": "yellow"
+    },
+    {
+      "id": 6,
+      "name": "Transport",
+      "icon": "fa-solid fa-car-side",
+      "bg_color": "#F3E8FF",
+      "color": "#56A4F2"
+    },
+    {
+      "id": 7,
+      "name": "Rent",
+      "icon": "fa-solid fa-money-bill-transfer",
+      "bg_color": "#FFEDD5",
+      "color": "orange"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "76e3",
+      "categoryName": "Entertainment",
+      "amount": 22,
+      "date": "2025-06-27T17:14:03.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fas fa-shopping-cart",
+      "categoryIconColor": "blue",
+      "categoryIconBgColor": "#E0E7FF"
+    },
+    {
+      "id": "3c16",
+      "categoryName": "Groceries",
+      "amount": 50,
+      "date": "2025-06-26T17:26:11.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-regular fa-newspaper",
+      "categoryIconColor": "yellow",
+      "categoryIconBgColor": "#EAB308"
+    },
+    {
+      "id": "e9d5",
+      "categoryName": "Transport",
+      "amount": 22,
+      "date": "2025-06-18T18:44:25.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-car-side",
+      "categoryIconColor": "#56A4F2",
+      "categoryIconBgColor": "#F3E8FF"
+    },
+    {
+      "id": "9e09",
+      "categoryName": "Gas",
+      "amount": 13,
+      "date": "2025-06-28T18:47:13.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-gas-pump",
+      "categoryIconColor": "red",
+      "categoryIconBgColor": "#FEE2E2"
+    },
+    {
+      "id": "a7c6",
+      "categoryName": "Shopping",
+      "amount": 300,
+      "date": "2025-06-18T18:47:36.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-bag-shopping",
+      "categoryIconColor": "orange",
+      "categoryIconBgColor": "#FEF9C3"
+    },
+    {
+      "id": "f003",
+      "categoryName": "Transport",
+      "amount": 33,
+      "date": "2025-05-14T18:48:23.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-car-side",
+      "categoryIconColor": "#56A4F2",
+      "categoryIconBgColor": "#F3E8FF"
+    },
+    {
+      "id": "6df3",
+      "categoryName": "News Paper",
+      "amount": 3,
+      "date": "2025-06-10T18:48:56.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-regular fa-newspaper",
+      "categoryIconColor": "yellow",
+      "categoryIconBgColor": "#EAB308"
+    },
+    {
+      "id": "9102",
+      "categoryName": "Rent",
+      "amount": 3,
+      "date": "2025-06-23T18:49:16.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-money-bill-transfer",
+      "categoryIconColor": "orange",
+      "categoryIconBgColor": "#FFEDD5"
+    },
+    {
+      "id": "9b7e",
+      "categoryName": "Gas",
+      "amount": 1584,
+      "date": "2025-06-28T18:49:39.000Z",
+      "currency": "EGP",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-gas-pump",
+      "categoryIconColor": "red",
+      "categoryIconBgColor": "#FEE2E2"
+    },
+    {
+      "id": "cc52",
+      "categoryName": "Shopping",
+      "amount": 3,
+      "date": "2025-06-24T18:50:37.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-bag-shopping",
+      "categoryIconColor": "orange",
+      "categoryIconBgColor": "#FEF9C3"
+    },
+    {
+      "id": "dcc4",
+      "categoryName": "Groceries",
+      "amount": 9,
+      "date": "2025-06-28T18:51:20.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-gamepad",
+      "categoryIconColor": "#ffffff",
+      "categoryIconBgColor": "#6366F1"
+    },
+    {
+      "id": "4463",
+      "categoryName": "Rent",
+      "amount": 33,
+      "date": "2025-06-28T18:52:47.000Z",
+      "currency": "USD",
+      "attachment": {},
+      "categoryIcon": "fa-solid fa-money-bill-transfer",
+      "categoryIconColor": "orange",
+      "categoryIconBgColor": "#FFEDD5"
+    }
+  ],
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "US Dollar"
+    },
+    {
+      "code": "EUR",
+      "name": "Euro"
+    },
+    {
+      "code": "EGP",
+      "name": "Egyptian Pound"
+    },
+    {
+      "code": "SAR",
+      "name": "Saudi Riyal"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": "admin",
+      "token": "admin-token-123"
+    },
+    {
+      "id": 2,
+      "username": "khloud Rammah",
+      "password": "123456",
+      "role": "user",
+      "token": "user-token-456"
+    }
+  ],
+  "income": {
+    "salary": 13000
+  }
+}
