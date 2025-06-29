@@ -6,6 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 #############################################################
+////to run project 
+first you should install project via github link i sent it in email 
+1-get clone https://github.com/Khloud355/expense.git 
+2-open gitbash in fakeapis folder to run json server (json-server --watch expense.json)
+3-open vs-code and open project folder , open terminal and write npm i 
+4- npm start
+
+will appear in localhost4200 and will direct to login page (email : khloud Rammah or admin )
+                                                          (password : 123456 or if admin --admin)
 
 i workd in this project with angular version 17 
 i used libraries like  "@fortawesome/fontawesome-free": "^6.7.2",
